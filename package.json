@@ -1,0 +1,26 @@
+{
+  "name": "youtube-typescript-101",
+  "version": "1.0.0",
+  "description": "A repo for the youtube video which I made.",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack && cp -r src/assets/* dist;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidthorn/youtube-typescript-101.git"
+  },
+  "author": "David Thorn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidthorn/youtube-typescript-101/issues"
+  },
+  "homepage": "https://github.com/davidthorn/youtube-typescript-101#readme",
+  "devDependencies": {
+    "ts-loader": "^5.3.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
