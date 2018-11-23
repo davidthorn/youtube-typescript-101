@@ -260,15 +260,30 @@ window.onload = () => {
 
    }
 
+   var _testFunctionToTakeAJSObject = function (obj: any) {
+        var name = obj.name;
+        var username = obj.username;
+        if (obj.name === undefined)
+            return undefined;
+        if (obj.username === undefined)
+            return undefined;
+        return {
+            name: obj.name,
+            username: obj.username
+        };
+    };
 
-   const functionToTakeAJSObject = (obj: any): UserData | undefined => {
+   const functionToTakeAJSObject = (obj: ApiUserData): UserData | undefined => {
         
-        let name: string = obj.name
+        let name = obj.name
         let username = obj.username
 
+        if(obj.name === undefined) return obj.name
+        if(obj.username === undefined) return obj.username
+
         return {
-            name: name,
-            username: username
+            name: obj.name,
+            username: obj.username
         }
 
     }
@@ -292,8 +307,24 @@ window.onload = () => {
 
 
 
+   /// Optional types
 
+   function getOptionalMiddleName(s: any) : nullableType {
+    return { name: s }
+   }
 
+   let optionalMiddleName: string | null = null
+
+   type nullableType = {
+       name?: string
+   }
+
+   let mName: nullableType = getOptionalMiddleName(null)
+
+   let pName = mName.name === undefined ? "" : `${mName.name} `
+   //let pName = mName.name || ""
+
+   let fullName = "David " + `${pName}` + "Thorn"
 
 
 
