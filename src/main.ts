@@ -187,8 +187,6 @@ window.onload = () => {
             return undefined
         }
 
-        let f = parts.shift()
-
         return {
             firstName: parts.shift() as string,
             lastName: parts.shift() as string
@@ -219,8 +217,12 @@ window.onload = () => {
 
     let name = davidName("David James Thorn" , mapFullNameToPersonName )
 
+    if(name === undefined) {
+        throw new Error(`the name (${name}) does not have the correct number of parts`)
+    }
 
-    
+    console.log(name)
+
 
 
 
