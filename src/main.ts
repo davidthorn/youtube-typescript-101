@@ -203,7 +203,21 @@ window.onload = () => {
 
     console.log(personName.firstName, personName.lastName)
 
+    /// ( fullName: string , map: (name: string) =>  PersonName | undefined  ) => PersonName | undefined
 
+
+    /**
+     * Takes a full name and returns a persons name type or undefined based upon the map functions result
+     *
+     * @param {string} fullName
+     * @param {((name: string) => PersonName | undefined)} map
+     * @returns {(PersonName | undefined)}
+     */
+    const davidName = ( fullName: string , map: (name: string) => PersonName | undefined  ): PersonName | undefined => {
+        return map(fullName)
+    }
+
+    let name = davidName("David James Thorn" , mapFullNameToPersonName )
 
 
     
