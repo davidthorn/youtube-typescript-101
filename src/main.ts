@@ -223,6 +223,72 @@ window.onload = () => {
 
     console.log(name)
 
+    /// Types
+
+   let objects = {
+       name: "Leanne Graham",
+       username: "Bret"
+   }
+
+   type UserData = {
+       name: string
+       username: string
+   }
+
+   type ApiUserData = {
+    name?: string
+    username?: string
+}
+
+   const vanillaFunctionToTakeAJSObject = (obj: any): any => {
+        
+        if(obj["name"] === undefined) {
+            throw new Error('name is not defined')
+        }
+
+        if(obj["username"] === undefined) {
+            throw new Error('username is not defined')
+        }
+
+        let name = obj.name
+        let username = obj.username
+
+        return {
+            name: name,
+            username: username
+        }
+
+   }
+
+
+   const functionToTakeAJSObject = (obj: any): UserData | undefined => {
+        
+        let name: string = obj.name
+        let username = obj.username
+
+        return {
+            name: name,
+            username: username
+        }
+
+    }
+
+   let typeSafeData = functionToTakeAJSObject({
+       name: "david",
+       username: "thorn"
+   })
+
+   if (typeSafeData === undefined) {
+       throw new Error('the type safe data was not type safe')
+   }
+
+   console.log(typeSafeData)
+
+   let data = vanillaFunctionToTakeAJSObject({
+       name: "david",
+       surname: "thorn"
+   })
+
 
 
 
