@@ -52,6 +52,57 @@ window.onload = () => {
 
     const isOfLegalAge: boolean = true
 
+    /// Any
+
+    let unknownProperty: any = {}
+
+    /// null
+
+
+    /// undefined
+
+
+    /// array 
+
+    let indexes: number[] = [0,1,2,4,8,16,32]
+
+    // let last: number | undefined = indexes.length <= 7 ? indexes[7]: undefined
+
+    // if (last !== undefined) {
+    //     /// do something here
+    // }
+
+    // let lastItem: number | undefined = indexes.pop()
+
+    // /// does that element index exists
+    // /// if it does exists them retrieve it
+    // /// if it does not exist then  handle the error
+
+    // if(lastItem === undefined) {
+    //     throw new Error("The last item is undefined this cant happen")
+    // }
+
+    let item: number | undefined = indexes.pop()
+
+    while(item !== undefined) {
+
+        /// do this code whilst item is not undefined
+
+        /// do some code here
+
+        item = indexes.pop()
+    }
+
+    // run this code when item is undefined
+
+
+
+
+
+
+
+
+
     
     
 
