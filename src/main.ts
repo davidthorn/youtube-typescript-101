@@ -107,6 +107,56 @@ window.onload = () => {
 
     // run this code when item is undefined
 
+    /**
+     * Adds the x and y together and returns the result
+     *
+     * @param {number} x
+     * @param {number} y
+     * @returns {number}
+     */
+    function add(x:  number, y: number): number {
+        return x + y
+    }
+
+    /**
+     * Adds the x and y together and returns the result
+     *
+     * @param {number} x
+     * @param {number} y
+     * @returns {number}
+     */
+    const addNumbers: (x: number, y: number) => number  = (x: number, y: number): number => {
+        return x + y
+    }
+
+
+    /**
+     * Adds the x and y together and returns the result
+     *
+     * @param {number} x
+     * @param {number} y
+     * @returns {number}
+     */
+    const addNumberFunction: (x: number, y: number) => number = function(x: number, y: number): number {
+        return x + y
+    }
+
+  
+    /// takes and input and provides and output
+
+    let addedSum = add(5, 2)
+    let addedSum1 = addNumbers(5, 6)
+    let addedSumFunction = addNumberFunction(7, 4)
+
+
+
+
+
+
+
+
+
+
 
     
 
