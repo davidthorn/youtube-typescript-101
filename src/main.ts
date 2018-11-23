@@ -84,16 +84,32 @@ window.onload = () => {
 
     let item: number | undefined = indexes.pop()
 
+    let isConnected: boolean | null = true
+
+    const asynchronousCallback = (x: number) => {
+        if(isConnected) return 
+        console.log(x)
+        /// continue if is connected
+    }
+
     while(item !== undefined) {
 
         /// do this code whilst item is not undefined
-
+        isConnected = null
         /// do some code here
 
         item = indexes.pop()
+        
+        let result = item === undefined ? 0 : item as number
+
+        asynchronousCallback(result)
     }
 
     // run this code when item is undefined
+
+
+    
+
 
 
 
