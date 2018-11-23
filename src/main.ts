@@ -1,5 +1,5 @@
 window.onload = () => {
-    const youtube: Youtube = {
+    const youtube = {
         name: "david",
         surname: "thorn"
     }
@@ -10,24 +10,16 @@ window.onload = () => {
     // header.appendChild(text)
     // container.appendChild(header)
   
-
-    /// number
-    /// double
-    /// float
-    /// array
-    /// null
-    /// object
-    /// undefined
-    /// string
-    /// []
-    /// {}
-    /// object
-    /// enum
-    /// any
-
     const davidsAge: number = 39
     const num1: number = 2
     const sum: number = davidsAge + num1
+
+    /// explaining let
+
+
+    const immutable: string = "david"
+    const mutable: string = "wolverine"
+
 
     console.log(sum)
 
