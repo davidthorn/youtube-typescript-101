@@ -26,9 +26,45 @@ window.onload = () => {
     const davidsBirthday: string = "22-12-1978"
     let davidsMutableAge: number = 39
 
+    // for(let x: number = 0; x < 10; x++) {
+
+    // }
+
+    // const radius: number = 40
+    // let angle: number = 0
+
+    // angle = radius * Math.sin(angle)
+    ///let someCompletelyUselessVariable = "asdas asd a sd asd asd iaslidjilas dasd"
+    // console.log(angle)
+
+    // console.log(sum)
 
 
-    console.log(sum)
+    /// Boolean
+
+    /// Yes or No
+    /// On or Off
+    /// 1 or 0
+    /// Left or Right
+    /// Up or down
+
+    let isWatching: boolean = true
+
+    const isOfLegalAge: boolean = true
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
