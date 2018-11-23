@@ -1,3 +1,11 @@
+/**
+ *
+ *
+ */
+/**
+ *
+ *
+ */
 window.onload = () => {
     const youtube = {
         name: "david",
@@ -149,11 +157,51 @@ window.onload = () => {
     let addedSumFunction = addNumberFunction(7, 4)
 
 
+    type AddNumberFunction = (x: number, y: number) => number
 
+    /**
+     *Takes an x and a y and passes it the high order callback provided and return a number
+     *
+     * @param {number} x
+     * @param {number} y
+     * @param {AddNumberFunction} callback
+     * @returns {number}
+     */
+    const highOrderFunction = (  x: number, y: number , callback: AddNumberFunction ): number => {
 
+        /// calculate something here and you can do the math 
+        /// because I dont like it
 
+        return callback(x, y)
+    }
 
+    type PersonName = {
+        firstName: string
+        lastName: string
+    }
 
+    const mapFullNameToPersonName = (fullName: string): PersonName | undefined => {
+        let parts = fullName.split(' ')
+
+        if(parts.length !== 2) {
+            return undefined
+        }
+
+        let f = parts.shift()
+
+        return {
+            firstName: parts.shift() as string,
+            lastName: parts.shift() as string
+        }
+    }
+
+    const personName: PersonName | undefined = mapFullNameToPersonName("David Thorn")
+    
+    if(personName === undefined) {
+        throw new Error('the name does not have the correct number of parts')
+    }
+
+    console.log(personName.firstName, personName.lastName)
 
 
 
