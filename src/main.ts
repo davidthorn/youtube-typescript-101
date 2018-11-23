@@ -180,16 +180,16 @@ window.onload = () => {
         lastName: string
     }
 
-    const mapFullNameToPersonName = (fullName: string): PersonName | undefined => {
+    const mapFullNameToPersonName = (fullName: string, allowedNumberOfSpacesInSurname: number = 0): PersonName | undefined => {
         let parts = fullName.split(' ')
 
-        if(parts.length !== 2) {
+        if(parts.length !== 2 + allowedNumberOfSpacesInSurname) {
             return undefined
         }
 
         return {
             firstName: parts.shift() as string,
-            lastName: parts.shift() as string
+            lastName: parts.join(" ") as string
         }
     }
 
@@ -211,11 +211,11 @@ window.onload = () => {
      * @param {((name: string) => PersonName | undefined)} map
      * @returns {(PersonName | undefined)}
      */
-    const davidName = ( fullName: string , map: (name: string) => PersonName | undefined  ): PersonName | undefined => {
-        return map(fullName)
+    const davidName = ( fullName: string,  allowedNumberOfSpacesInSurname: number , map: (name: string , allowedNumberOfSpacesInSurname: number) => PersonName | undefined  ): PersonName | undefined => {
+        return map(fullName,  allowedNumberOfSpacesInSurname)
     }
 
-    let name = davidName("David James Thorn" , mapFullNameToPersonName )
+    let name = davidName("David James Steven Thorn", 2 , mapFullNameToPersonName )
 
     if(name === undefined) {
         throw new Error(`the name (${name}) does not have the correct number of parts`)
