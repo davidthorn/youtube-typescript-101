@@ -18,7 +18,14 @@ window.onload = () => {
 
 
     const immutable: string = "david"
-    const mutable: string = "wolverine"
+    let mutable: string = "wolverine"
+
+    const xmen: string = "storm"
+    
+
+    const davidsBirthday: string = "22-12-1978"
+    let davidsMutableAge: number = 39
+
 
 
     console.log(sum)
